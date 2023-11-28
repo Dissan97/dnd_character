@@ -1,0 +1,33 @@
+@import url('home.css');
+
+.select-container {
+    position: relative;
+    display: inline-block;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+}
+
+select:hover {
+    border-color: #555;
+}
+
+/* Stile per freccia della select */
+.select-container:after {
+    content: '\25BC'; /* Unicode per una freccia verso il basso */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #555;
+}

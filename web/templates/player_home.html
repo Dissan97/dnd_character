@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>PLAYER HOME</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    HELLO PLAYER
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('create_character.character_form') }}">Crea un personaggio</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
