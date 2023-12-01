@@ -7,23 +7,35 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
 </head>
 <body>
+<nav>
+    <ul>
+        <li><a href="{{ url_for('home.welcome') }}">HOME</a></li>
+        <li class="ul_right"><a href="{{ url_for('login.sign_in') }}">ACCEDI</a></li>
+    </ul>
+</nav>
+<div class="form_container">
     <div class="insertion_container">
         <div class="logo">
             D & D 5e
         </div>
+        <div class="box_message">
+            REGISTRATI
+        </div>
         <form method="post" action="{{ url_for('login.sign_up_confirm') }}">
             <div class="form-group">
-                <label for="username">Username</label>
                 <input type="text" id="username" name="username" placeholder="Inserisci l'username">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Inserisci la password">
             </div>
             <div class="form-group">
                 <button type="submit">Registrati</button>
             </div>
         </form>
+        <div class="form-group">
+            <a href="{{ url_for('login.sign_in') }}">Hai gia un account accedi</a>
+        </div>
     </div>
+</div>
 </body>
 </html>

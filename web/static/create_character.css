@@ -1,8 +1,10 @@
-@import url('home.css');
+@import url('login.css');
 
 .select-container {
     position: relative;
     display: inline-block;
+    width: 100%;
+    text-align: center;
 }
 
 select {
@@ -15,6 +17,7 @@ select {
     border-radius: 4px;
     width: 100%;
     cursor: pointer;
+    text-align: center;
 }
 
 select:hover {

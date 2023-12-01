@@ -1,7 +1,5 @@
 from flask import Blueprint, render_template, after_this_request, g
 
-from controller.session import SessionManager
-
 home = Blueprint('home', __name__,
                  template_folder='templates',
                  static_folder='static'

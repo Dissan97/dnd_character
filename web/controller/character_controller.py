@@ -2,6 +2,7 @@ import json
 from typing import List
 
 from bean.character_beans import RaceBean
+from bean.player_beans import PlayerBean
 from controller.login_controller import Login
 from controller.utils import extract_enums_list
 from dao.race_loader import extract_races
@@ -70,6 +71,7 @@ class PlayerController:
         self.player = login_controller.player
         self.init_player()
         self.race_bean = RaceBean(races=PlayerController.get_race_specs())
+        self.player_bean = PlayerBean(player=self.player)
 
     def init_player(self):
         characters = PlayerController.load_characters(self.player.name)
@@ -103,3 +105,6 @@ class PlayerController:
     @staticmethod
     def get_classes():
         return extract_enums_list(ClassType)
+
+    def get_player_bean(self):
+        return self.player_bean

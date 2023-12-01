@@ -3,10 +3,20 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
+    height: 100vh;
+}
+
+a {
+    color: cornflowerblue;
+}
+
+.form_container{
+    padding-top: 100px;
+    align-self: center;
+    alignment-baseline: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .insertion_container {
@@ -22,6 +32,10 @@ body {
 
 .logo {
     margin-bottom: 20px;
+}
+.box_message{
+    margin-bottom: 20px;
+    font-size: xx-large;
 }
 
 .form-group {
