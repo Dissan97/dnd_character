@@ -5,8 +5,8 @@ home = Blueprint('home', __name__,
                  static_folder='static'
                  )
 
-
-@home.route('/', defaults={'page': 'home'})
+page = 'character_sheet'
+@home.route('/', defaults={'page': f'{page}'})
 @home.route('/')
 def welcome():
-    return render_template('home.html')
+    return render_template('character_sheet.html')
